@@ -1,4 +1,5 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import usePmGraphData from '../hooks/usePmGraphData';
 
 // ─── PathMap data & algorithms ───────────────────────────────────────────────
 // Graph data (fetched from <base>/graph-data.json so it works under /summership/, same file index.html/path.html use)
@@ -36,22 +37,6 @@ export function pmFetchGraphData() {
       });
   }
   return pmGraphDataPromise;
-}
-
-// React hook — loads the graph data once, reports 'loading' | 'ready' | 'error'
-export function usePmGraphData() {
-  const [status, setStatus] = useState(() => (pmNodes.length ? 'ready' : 'loading'));
-
-  useEffect(() => {
-    if (status === 'ready') return;
-    let cancelled = false;
-    pmFetchGraphData()
-      .then(() => { if (!cancelled) setStatus('ready'); })
-      .catch((err) => { if (!cancelled) { console.error(err); setStatus('error'); } });
-    return () => { cancelled = true; };
-  }, [status]);
-
-  return status;
 }
 
 // ─── Module Progress Tracker (localStorage-based, easy/medium/hard per module) ───
@@ -246,21 +231,6 @@ let pmNavigateFn = null;
 export function setPmNavigateFn(fn) { pmNavigateFn = fn; }
 export function getPmNavigateFn() { return pmNavigateFn; }
 
-export function usePmModuleTracking(moduleId) {
-  const graphStatus = usePmGraphData();
-  const [, bump] = useState(0);
-  useEffect(() => {
-    const fn = () => bump((n) => n + 1);
-    pmTrackListeners.add(fn);
-    return () => pmTrackListeners.delete(fn);
-  }, []);
-  const record = useCallback((difficulty, isCorrect) => {
-    pmTrackAnswer(moduleId, difficulty, isCorrect);
-  }, [moduleId]);
-  const thresholdMet = moduleId ? pmTrackThresholdMet(moduleId) : false;
-  const nextModules = (graphStatus === 'ready' && moduleId && thresholdMet) ? pmTrackNextModule(moduleId) : [];
-  return { record, thresholdMet, nextModules };
-}
 
 export function pmGetSubgraphNodes(goalIdList) {
   const visited = new Set();
