@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from '../lib/router';
+import { navigate } from '../../lib/router';
 import './MenuCard.css';
 
 /**

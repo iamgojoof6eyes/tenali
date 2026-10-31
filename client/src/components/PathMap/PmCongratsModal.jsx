@@ -1,4 +1,4 @@
-import { pmCatColor, pmNodeById, pmSuccessorMap } from '../../utils/pathMapHelpers';
+import { pmCatColor, pmNodeById, pmSuccessorMap } from '../../utils/pathMapUtils';
 
 
 function PmCongratsModal({ goalIds, path, onClose, onNewGoal, onSetGoal }) {

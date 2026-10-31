@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import usePmGraphData from '../../hooks/usePmGraphData';
-import { pmGetCurrentSuggestedModule } from '../../utils/pathMapHelpers';
+import { pmGetCurrentSuggestedModule } from '../../utils/pathMapUtils';
 import { QUEST_BANNER_STYLES } from './pathCSS';
 
 function PmQuestBanner({ onSelect }) {

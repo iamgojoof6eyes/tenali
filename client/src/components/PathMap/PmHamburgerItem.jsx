@@ -1,4 +1,4 @@
-import { usePathmapState } from '../../utils/pathMapHelpers';
+import { usePathmapState } from '../../utils/pathMapUtils';
 
 
 function PmHamburgerItem({ onOpen }) {

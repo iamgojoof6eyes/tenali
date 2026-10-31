@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SectionFilterModal from './SectionFilterModal';
+import SectionFilterModal from '../modals/SectionFilterModal';
 import './SectionFilterBar.css';
 
 /**

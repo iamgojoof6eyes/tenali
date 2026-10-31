@@ -59,7 +59,7 @@ export function pmEmptyModuleStat() {
   };
 }
 
-const pmTrackListeners = new Set();
+export const pmTrackListeners = new Set();
 export function pmTrackNotify() {
   pmTrackListeners.forEach((fn) => {
     try { fn(); } catch { /* ignore */ }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import WarmupModal from './WarmupModal';
+import WarmupModal from '../modals/WarmupModal';
 
 export default function DailyWarmupCard({ completedTopics = [], onSelectTopic, apiBase = '' }) {
   const [warmupData, setWarmupData] = useState(null);

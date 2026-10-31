@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FEATURED_TILES, MATH_LAB_ENTRY, GEOCRAFT_ENTRY } from '../features/tiles';
+import { FEATURED_TILES, MATH_LAB_ENTRY, GEOCRAFT_ENTRY } from '../../features/tiles';
 import { PmHamburgerItem } from '../PathMap';
-import { navigate } from '../lib/router';
+import { navigate } from '../../lib/router';
 import './HomeNavMenu.css';
 
 function DropdownItem({ onClick, title, subtitle, style }) {

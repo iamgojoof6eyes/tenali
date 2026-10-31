@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { pmTrackAnswer, pmTrackListeners, pmTrackNextModule, pmTrackThresholdMet } from '../utils/pathMapHelpers.js';
+import { pmTrackAnswer, pmTrackListeners, pmTrackNextModule, pmTrackThresholdMet } from '../utils/pathMapUtils.js';
 import usePmGraphData from './usePmGraphData.js';
 
 export default  function usePmModuleTracking(moduleId) {

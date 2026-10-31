@@ -1,8 +1,8 @@
-import { pmNodeById, usePathmapState } from '../../utils/pathMapHelpers';
+import { pmNodeById, usePathmapState } from '../../utils/pathMapUtils';
 import { PM_STYLES } from './pathCSS';
 import PmGoalPicker from './PmGoalPicker';
-import PmStatsBar from './PmStatsBar';
 import PmSnakePath from './PmSnakePath';
+import PmStatsBar from './PmStatsBar';
 
 function PmGoalModal({ open, onClose }) {
     const { goalIds, known, path, setGoal, clearGoal, toggleKnown, resetKnown, pmStatus } = usePathmapState();

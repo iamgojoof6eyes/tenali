@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { pmCatColor, pmNodes } from '../../utils/pathMapHelpers';
+import { pmCatColor, pmNodes } from '../../utils/pathMapUtils';
 
 
 function PmGoalPicker({ goalIds, onSetGoal, onClear }) {

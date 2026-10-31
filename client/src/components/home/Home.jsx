@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { TILES } from '../features/tiles';
+import { TILES } from '../../features/tiles';
 import DailyWarmupCard from './DailyWarmupCard';
-import AboutModal from './AboutModal';
-import HomeNavMenu from './HomeNavMenu';
-import SearchBar from './SearchBar';
+import AboutModal from '../modals/AboutModal';
+import HomeNavMenu from '../layout/HomeNavMenu';
+import SearchBar from '../search/SearchBar';
 import CategoryCardsGrid from './CategoryCardsGrid';
-import SectionDrilldownView from './SectionDrilldownView';
-import GlobalSearchResults from './GlobalSearchResults';
+import SectionDrilldownView from '../search/SectionDrilldownView';
+import GlobalSearchResults from '../search/GlobalSearchResults';
 import MenuCard from './MenuCard';
 import { PmQuestBanner, PmGoalModal, PmHomeSection } from '../PathMap';
-import { isStage3Completed } from '../features/progress';
+import { isStage3Completed } from '../../features/progress';
 import './Home.css';
 
 const API = import.meta.env.VITE_API_BASE_URL || '';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { API, QuizLayout, useTimer, useProgressSubmit, renderFeedback } from '../App.jsx'
-import CoordinateGrid from '../components/CoordinateGrid'
+import CoordinateGrid from '../components/interactive/CoordinateGrid'
 
 export default function CoordGeomInteractiveApp({ onBack }) {
   const [started, setStarted] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useTimer } from '../hooks/useTimer';
-import { QuizLayout } from '../components/QuizLayout';
+import { QuizLayout } from '../components/layout/QuizLayout';
 import './CrosswordApp.css';
 
 // ─────────────────────────────────────────────────────────────

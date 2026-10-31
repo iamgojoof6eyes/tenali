@@ -19,7 +19,7 @@
  */
 
 import { useState, useEffect, useRef, useMemo } from 'react'
-import rawTerms from '../data/glossaryTerms.json'
+import rawTerms from '../../data/glossaryTerms.json'
 
 // ─── Build match map once at module load ────────────────────────────────────
 // matchMap: lowercase form → { term (canonical), definition }

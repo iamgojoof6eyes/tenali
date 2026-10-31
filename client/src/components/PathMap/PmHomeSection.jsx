@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { pmNodeById, usePathmapState } from '../../utils/pathMapHelpers';
+import { pmNodeById, usePathmapState } from '../../utils/pathMapUtils';
 import { PM_STYLES } from './pathCSS';
-import PmHomePath from './PmHomePath';
 import PmCongratsModal from './PmCongratsModal';
+import PmHomePath from './PmHomePath';
 
 function PmHomeSection({ onSelect, onOpenGoalPicker }) {
     const { goalIds, known, path, clearGoal, toggleKnown, setGoal, pmStatus } = usePathmapState();

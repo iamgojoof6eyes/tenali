@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { pmFetchGraphData, pmNodes } from '../utils/pathMapHelpers.js';
+import { pmFetchGraphData, pmNodes } from '../utils/pathMapUtils.js';
 
 // React hook — loads the graph data once, reports 'loading' | 'ready' | 'error'
 export default function usePmGraphData() {

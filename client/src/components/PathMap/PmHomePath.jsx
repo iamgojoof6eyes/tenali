@@ -1,4 +1,4 @@
-import { pmCatColor, pmNodeById, pmStarPoints } from '../../utils/pathMapHelpers';
+import { pmCatColor, pmNodeById, pmStarPoints } from '../../utils/pathMapUtils';
 
 const PMH_WIDTH   = 620;
 const PMH_AMP     = 190;

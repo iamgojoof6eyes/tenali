@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { pmCatColor, pmNodes } from '../../utils/pathMapHelpers';
+import { pmCatColor, pmNodes } from '../../utils/pathMapUtils';
 
 function PmModuleGrid({ path, goalIds, onSetGoal }) {
     const [filter, setFilter] = useState('');

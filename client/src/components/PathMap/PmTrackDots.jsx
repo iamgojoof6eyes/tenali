@@ -1,4 +1,4 @@
-import { pmTrackGetStats } from "../../utils/pathMapHelpers";
+import { pmTrackGetStats } from "../../utils/pathMapUtils";
 
 function PmTrackDots({ moduleId }) {
     const stat = pmTrackGetStats(moduleId);

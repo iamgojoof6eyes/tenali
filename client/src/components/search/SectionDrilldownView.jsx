@@ -1,5 +1,5 @@
 import React from 'react';
-import { calculateSectionProgress } from '../features/progress';
+import { calculateSectionProgress } from '../../features/progress';
 import './SectionDrilldownView.css';
 
 /**

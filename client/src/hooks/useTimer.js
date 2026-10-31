@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
  *   'perfect'  — hidden (elapsed kept internally but not shown by QuizLayout)
  *   other      — count-up stopwatch (original behaviour)
  */
-export function useTimer() {
+export default function useTimer() {
   const [elapsed, setElapsed] = useState(0);
   const [remaining, setRemaining] = useState(0);
   const [mode, setMode] = useState('standard');

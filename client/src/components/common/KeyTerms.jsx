@@ -41,9 +41,9 @@
  */
 
 import { useState, useEffect, useRef } from 'react'
-import topicGlossaryMap from '../data/topicGlossaryMap.json'
-import glossaryTerms from '../data/glossaryTerms.json'
-import GlossaryVisual from '../data/glossaryVisuals'
+import topicGlossaryMap from '../../data/topicGlossaryMap.json'
+import glossaryTerms from '../../data/glossaryTerms.json'
+import GlossaryVisual from '../../data/glossaryVisuals'
 
 export default function KeyTerms({ topicKey }) {
   // -------------------------------------------------------------------

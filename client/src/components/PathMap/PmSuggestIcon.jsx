@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import usePmGraphData from '../../hooks/usePmGraphData';
 import usePmModuleTracking from '../../hooks/usePmModuleTracking';
-import { getPmNavigateFn, installPmAnswerInterceptor, pmNodeById } from '../../utils/pathMapHelpers';
+import { getPmNavigateFn, installPmAnswerInterceptor, pmNodeById } from '../../utils/pathMapUtils';
 import PmTrackDots from './PmTrackDots';
 
 function PmSuggestIcon({ moduleId, onNavigate }) {
